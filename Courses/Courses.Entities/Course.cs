@@ -18,6 +18,5 @@ namespace Courses.Entities
         public int CategoryId { get; set;}
         public string CourseImage { get; set; } = "https://loremflicker.com/320/240";
         public Category? Category { get; set; }
-
     }
 }
