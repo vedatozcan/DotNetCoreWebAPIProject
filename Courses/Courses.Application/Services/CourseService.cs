@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Cources.DataTransferObjects.Responses;
+using Courses.Application.Extentions;
 using Courses.DataOperations.Repositories;
 using System;
 using System.Collections.Generic;
@@ -22,9 +23,20 @@ namespace Courses.Application.Services
 
         public async Task<IEnumerable<CourseSummaryResponse>> GetCoursesAsync()
         {
-            var courses = _repository.GetAllAsync();
+            var courses = await _repository.GetAllAsync();
             var responses = courses.ConvertToDto<IEnumerable<CourseSummaryResponse>>(_mapper);
+
             return responses;
+
+            //eğer autoMapper kütüphanesi olmasaydı:
+            //var responses = courses.Select(c => new CourseSummaryResponse
+            //{
+            //    Id = c.Id,
+            //    CourseImage = c.CourseImage,
+            //    Description = c.Description,
+            //    Name = c.Name
+            //});
+
         }
     }
 }

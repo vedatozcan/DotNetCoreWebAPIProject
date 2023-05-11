@@ -9,8 +9,8 @@ namespace Courses.DataOperations.Repositories
 {
     public interface ICourseRepository : IGenericRepository<Course>
     {
-        IEnumerable<Course> SearchByName(string name);
-        IEnumerable<Course> SearchByCategory(int id);
+        Task<IEnumerable<Course>> SeachByName(string name);
+        Task<IEnumerable<Course>> SeachByCategory(int id);
 
     }
 }

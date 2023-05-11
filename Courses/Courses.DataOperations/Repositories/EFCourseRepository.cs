@@ -1,4 +1,6 @@
-﻿using Courses.Entities;
+﻿using Courses.DataOperations.Data;
+using Courses.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,29 +11,58 @@ namespace Courses.DataOperations.Repositories
 {
     public class EFCourseRepository : ICourseRepository
     {
-        public Task Create(Course Entity)
+        private readonly CoursesCatalogDbContext dbContext;
+
+        public EFCourseRepository(CoursesCatalogDbContext dbContext)
         {
-            throw new NotImplementedException();
+            this.dbContext = dbContext;
         }
 
-        public Task Delete(int id)
+        public async Task Create(Course entity)
         {
-            throw new NotImplementedException();
+            await dbContext.Courses.AddAsync(entity);
+            await dbContext.SaveChangesAsync();
         }
 
-        public Task<IEnumerable<Course>> GetAllAsync()
+        public async Task Delete(int id)
         {
-            throw new NotImplementedException();
+            var course = dbContext.Courses.AsNoTracking().FirstOrDefault(c => c.Id == id);
+            if (course != null)
+            {
+                dbContext.Remove(course);
+            }
+            await dbContext.SaveChangesAsync();
         }
 
-        public Course GetAsync(int id)
+        public async Task<IEnumerable<Course>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await dbContext.Courses.ToListAsync();
+        }
+
+        public async Task<Course> GetAsync(int id)
+        {
+            return await dbContext.Courses.FindAsync(id);
         }
 
         public Task<bool> IsExistAsync(int id)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<bool> IsExistsAsync(int id)
+        {
+            return await dbContext.Courses.AsNoTracking().AnyAsync(c => c.Id == id);
+        }
+
+        public async Task<IEnumerable<Course>> SeachByCategory(int id)
+        {
+            return await dbContext.Courses.AsNoTracking().Where(c => c.CategoryId == id).ToListAsync();
+
+        }
+
+        public async Task<IEnumerable<Course>> SeachByName(string name)
+        {
+            return await dbContext.Courses.AsNoTracking().Where(c => c.Name.Contains(name)).ToListAsync();
         }
 
         public IEnumerable<Course> SearchByCategory(int id)
@@ -44,7 +75,13 @@ namespace Courses.DataOperations.Repositories
             throw new NotImplementedException();
         }
 
-        public Task Update(Course Entity)
+        public async Task Update(Course entity)
+        {
+            dbContext.Courses.Update(entity);
+            await dbContext.SaveChangesAsync();
+        }
+
+        Course IGenericRepository<Course>.GetAsync(int id)
         {
             throw new NotImplementedException();
         }
