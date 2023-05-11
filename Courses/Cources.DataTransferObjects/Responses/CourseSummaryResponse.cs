@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cources.DataTransferObjects.Responses
 {
-    public class CourceSummaryResponse
+    public class CourseSummaryResponse
     {
         public int Id { get; set; }
         public string Name { get; set; }

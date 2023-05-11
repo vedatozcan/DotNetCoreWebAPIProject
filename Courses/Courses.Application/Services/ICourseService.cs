@@ -9,7 +9,7 @@ namespace Courses.Application.Services
 {
     public interface ICourseService
     {
-        Task<IEnumerable<CourceSummaryResponse>> GetCourcesAsync();
+        Task<IEnumerable<CourseSummaryResponse>> GetCoursesAsync();
 
     }
 }
