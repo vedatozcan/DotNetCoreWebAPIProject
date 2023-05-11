@@ -17,7 +17,7 @@ namespace Courses.Application.Services
             _repository = repository;
         }
 
-        public Task<IEnumerable<CourceSummaryResponse>> GetCourcesAsync()
+        public async Task<IEnumerable<CourceSummaryResponse>> GetCourcesAsync()
         {
             var cource = _repository.GetAllAsync();
             throw new NotImplementedException();
