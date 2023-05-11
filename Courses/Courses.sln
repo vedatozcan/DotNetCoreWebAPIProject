@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Courses.Entities", "Courses.Entities\Courses.Entities.csproj", "{FA50F618-0182-417F-A795-C96C4DC9CF45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Courses.Entities", "Courses.Entities\Courses.Entities.csproj", "{FA50F618-0182-417F-A795-C96C4DC9CF45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Courses.DataOperations", "Courses.DataOperations\Courses.DataOperations.csproj", "{357E0B7B-79D6-4725-8183-431B3DC62415}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Courses.DataOperations", "Courses.DataOperations\Courses.DataOperations.csproj", "{357E0B7B-79D6-4725-8183-431B3DC62415}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Courses.Application", "Courses.Application\Courses.Application.csproj", "{F5DAFE79-98CB-4829-B770-6837593452E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Courses.Application", "Courses.Application\Courses.Application.csproj", "{F5DAFE79-98CB-4829-B770-6837593452E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Courses.API", "Courses.API\Courses.API.csproj", "{C79728D4-F779-4D65-B674-5EE326AF45F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Courses.API", "Courses.API\Courses.API.csproj", "{C79728D4-F779-4D65-B674-5EE326AF45F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cources.DataTransferObjects", "Cources.DataTransferObjects\Cources.DataTransferObjects.csproj", "{1FA93DF7-BB8A-4FBE-9B03-EFDA6E37ABBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cources.DataTransferObjects", "Cources.DataTransferObjects\Cources.DataTransferObjects.csproj", "{1FA93DF7-BB8A-4FBE-9B03-EFDA6E37ABBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

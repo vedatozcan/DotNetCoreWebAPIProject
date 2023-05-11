@@ -11,8 +11,8 @@ namespace Courses.API.Controllers
         private readonly ICourseService courseService;
 
         [HttpGet]
-        public IActionResult Get() {
-            var courses = courseService.GetCourses();
+        public async Task<IActionResult> Get() {
+            var courses = await courseService.GetCourcesAsync();
             return Ok(courses);
         }
 
