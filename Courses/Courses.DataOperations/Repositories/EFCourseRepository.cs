@@ -81,9 +81,5 @@ namespace Courses.DataOperations.Repositories
             await dbContext.SaveChangesAsync();
         }
 
-        Course IGenericRepository<Course>.GetAsync(int id)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
