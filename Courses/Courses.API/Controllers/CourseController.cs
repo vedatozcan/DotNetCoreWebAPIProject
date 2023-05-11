@@ -12,7 +12,7 @@ namespace Courses.API.Controllers
 
         [HttpGet]
         public async Task<IActionResult> Get() {
-            var courses = await courseService.GetCourcesAsync();
+            var courses = await courseService.GetCoursesAsync();
             return Ok(courses);
         }
 

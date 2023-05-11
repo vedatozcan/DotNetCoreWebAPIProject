@@ -13,6 +13,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Courses.API", "Courses.API\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cources.DataTransferObjects", "Cources.DataTransferObjects\Cources.DataTransferObjects.csproj", "{1FA93DF7-BB8A-4FBE-9B03-EFDA6E37ABBE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{05C1573D-A104-4E64-B7E9-1DBBB00009A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{ECCB2AD4-AA99-4EC2-A256-47E116718C31}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{B59643E6-5C07-4BD3-95D2-6724BCCCE93F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{903AD35C-1E99-412C-9906-C1A2C59E111B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +50,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FA50F618-0182-417F-A795-C96C4DC9CF45} = {05C1573D-A104-4E64-B7E9-1DBBB00009A8}
+		{357E0B7B-79D6-4725-8183-431B3DC62415} = {903AD35C-1E99-412C-9906-C1A2C59E111B}
+		{F5DAFE79-98CB-4829-B770-6837593452E5} = {ECCB2AD4-AA99-4EC2-A256-47E116718C31}
+		{C79728D4-F779-4D65-B674-5EE326AF45F0} = {B59643E6-5C07-4BD3-95D2-6724BCCCE93F}
+		{1FA93DF7-BB8A-4FBE-9B03-EFDA6E37ABBE} = {ECCB2AD4-AA99-4EC2-A256-47E116718C31}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D284EB37-9800-48CE-8808-824729F78BC4}
